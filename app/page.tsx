@@ -1,9 +1,47 @@
-import Navbar from '@/components/navbar'
+import CompanionCard from '@/components/CompanionCard'
+import CompanionsList from '@/components/CompanionsList'
+import Cta from '@/components/CTA'
 import React from 'react'
 
 const Page = () => {
   return (
-    <Navbar />
+    <main>
+        <h1>
+            Popular Companions
+        </h1>
+
+        <section className='home-section'>
+            <CompanionCard
+                id='123'
+                name='Neura the Brainy Explorer'
+                topic="Neural Network of the brain"
+                subject="science"
+                duration={45}
+                color='#ffda6e'
+            />
+            <CompanionCard
+                id='456'
+                name='Counsty the number wizard'
+                topic="Derivatives and Integrals"
+                subject="Mathematics"
+                duration={30}
+                color='#e5d0ff'
+            />
+            <CompanionCard
+                id='789'
+                name='Verba the Vocubulary Builder'
+                topic="language"
+                subject="English Literature"
+                duration={30}
+                color='#bde7ff'
+            />
+        </section>
+
+        <section className='home-section'>
+            <CompanionsList />
+            <Cta />
+        </section>
+    </main>
   )
 }
 
